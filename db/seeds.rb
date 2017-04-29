@@ -473,7 +473,6 @@ organization_list = [
        ]
 ]
 
-
   organization_list.each do |name, address, overview, employees, teamsize,
     website,twitter,published|
     Organization.create(name: name, address: address, overview: overview,
