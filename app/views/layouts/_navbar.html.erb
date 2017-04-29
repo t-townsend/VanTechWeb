@@ -1,0 +1,28 @@
+<!-- top nav is for sessions, profile and logo (left side) -->
+<!-- all site navigation will be done on the side nav -->
+
+<nav style="">
+  <div class="nav-wrapper #00acc1 cyan darken-1">
+
+<!-- logo and brand -->
+    <a href="#!" class="brand-logo left" style="padding-left:10px;">
+      <i class="large material-icons">language</i>
+      VanTech Web</a>
+
+<!-- need to implement devise here. see user md file in /layouts/ -->
+    <ul class="right">
+      <li><%= link_to 'Sign Up', new_user_registration_path %> </li>
+      <li><%= link_to 'Login', new_user_session_path %> </li>
+    </ul>
+
+  </div>
+</nav>
+
+<!-- IF SIGNED IN dropdown profile menu, leave where it is -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Profile</a></li>
+  <li><a href="#!">Dashboard</a></li>
+  <li><a href="#!">Settings</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">Logout</a></li>
+</ul>
