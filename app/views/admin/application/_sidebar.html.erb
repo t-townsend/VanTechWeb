@@ -10,9 +10,9 @@ as defined by the routes in the `admin/` namespace
 
 <ul class="sidebar__list">
   <br>
-  <%= image_tag 'logo_teal.png' %>
+  <%= image_tag ('assets/logo.png') %>
   <li>Welcome, Admin</li>
-  <hr>
+
   <% Administrate::Namespace.new(namespace).resources.each do |resource| %>
     <li>
       <%= link_to(
@@ -22,5 +22,5 @@ as defined by the routes in the `admin/` namespace
       ) %>
     </li>
   <% end %>
-  <li style='color:red' class='sidebar__link'><%= link_to "Leave Dashboard", root_path %></li>
+  <li style='color:red' class='sidebar__link'>Leave dashboard</li>
 </ul>
