@@ -1,8 +1,24 @@
 <div class="body-content">
 <div class="container">
+
+  <div class="">
+    <p>Title: <%= @organization.name %></p>
+    <p>Address: <%= @organization.address %></p>
+    <p>Overview: <%= @organization.overview %></p>
+    <p>Number of Employees: <%= @organization.employees %></p>
+    <p>Tech Team Size: <%= @organization.teamsize %></p>
+    <p>Website: <%= @organization.website %></p>
+    <p>Twitter: <%= @organization.twitter %></p>
+    <span>Technology: </span>
+    <% @organization.tags.each do |t| %>
+    <div class="chip">
+      <%= t.name %>
+      <i class="close material-icons">close</i>
+
   <div class="row">
     <div class="col m4">
       <img style="max-width: 250px; margin:5px;"src="http://www.logo-company.in/logo/best-logo-designer-company-356.jpg" alt="">
+
     </div>
     <div class="col m8">
       <table class="bordered">
