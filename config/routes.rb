@@ -23,7 +23,10 @@ Rails.application.routes.draw do
 
   resources :directory, only: [:index]
 
+  resources :tags, only: [:create]
+
   resources :about, only: [:index]
+
 
   root 'home#index'
 end
