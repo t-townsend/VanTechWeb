@@ -44,6 +44,7 @@ User.create(name: "Admin",
             admin: true)
 puts "Admin created!"
 
+
 organization_list =
   [["Canada Drives",
     "Suite 600, Two Bentall Centre 555 Burrard Street, Vancouver, BC V7X 1M8",
