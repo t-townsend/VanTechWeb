@@ -3,8 +3,10 @@
 
   <h1>News List</h1>
 
-  <div>
-    <%= paginate @articles %> <br><br>
+  <div class='paginate-top white-text'>
+    <p class='right paginate-text'>
+      <%= "Giving you #{@articles.length} articles" %></p>
+    <p class='paginate-text2'><%= paginate @articles %></p>
   </div>
 
   <ul id = "article-block">
@@ -26,7 +28,7 @@
 
   <% end %>
 </ul>
-<div>
+<div class='paginate-bottom'>
   <%= paginate @articles %> <br><br>
 </div>
 </div>
