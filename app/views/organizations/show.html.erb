@@ -18,8 +18,8 @@
 <div class="body-content">
   <div style="height: 100%;" class="parallax-container">
     <div style="position:relative;" class="parallax">
-      <h1 style="z-index:1; postion:absolute; color:white; margin-left: 20px;"><%= @organization.name %></h1>
-      <img style="z-index:-1;"src="/assets/header2.png">
+      <h1 style="z-index:1; color:white; margin-left: 20px;"><%= @organization.name %></h1>
+      <img style="z-index:-1;" src="/assets/header2.png">
     </div>
   </div>
 <div class="container">
@@ -28,8 +28,7 @@
 
   <div class="row">
       <div class="col m4">
-        <img style="max-width: 250px; margin:5px;"src="http://www.logo-company.in/logo/best-logo-designer-company-356.jpg" alt="">
-
+        <%= image_tag (@organization.icon_url), style:"max-width: 250px; margin:25px 5px 5px 5px;"%><br><br>
       </div>
       <div class="col m8">
         <table class="bordered">
@@ -65,6 +64,10 @@
                data-height="400"
                data-chrome="nofooter noborders">
             </a></td>
+          </tr>
+          <tr>
+            <td><strong>Icon: </strong></td>
+            <td><%= @organization.icon %></td>
           </tr>
           <tr>
             <td><strong>Technology:</strong></td>
@@ -105,11 +108,6 @@
           {
               "lat": <%= @organization.lat %>,
               "lng": <%= @organization.long %>,
-              "picture": {
-                  "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
-                  "width":  32,
-                  "height": 32
-              },
               "infowindow": "<%= "#{@organization.name}"%>"
           }
         ]);

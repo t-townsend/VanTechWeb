@@ -1,4 +1,6 @@
 <header>
+<!-- need to add a tag because sidebar disappears after smalls creen  -->
+
   <nav style="background-image: url(assets/geo_final.jpg); background-size: 100%" class='top-nav'>
 
     <a href="/" class="brand-logo">
@@ -8,6 +10,7 @@
     <div class="nav-wrapper"><% if user_signed_in? && current_user.admin? %>
       <ul class="right">
         <li>Hello <%= "#{current_user.name}" %>!</li>
+        <%= image_tag (current_user.icon_url), class:'dropdown-button small-dp'%>
 
         <li class=''><a class=''>
       <!-- need to implement if user has icon, use their icon -->
