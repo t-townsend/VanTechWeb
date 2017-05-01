@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
+  
+=======
   def show
 
   end
@@ -6,4 +9,5 @@ class UsersController < ApplicationController
   def edit
   end 
 
+>>>>>>> 011b4be37d3641ff9f541b29728538be01f99a07
 end
