@@ -28,8 +28,7 @@
 
   <div class="row">
       <div class="col m4">
-        <img style="max-width: 250px; margin:5px;"src="http://www.logo-company.in/logo/best-logo-designer-company-356.jpg" alt="">
-
+        <%= image_tag (@organization.icon_url), style:"max-width: 250px; margin:25px 5px 5px 5px;"%><br><br>
       </div>
       <div class="col m8">
         <table class="bordered">
@@ -65,6 +64,10 @@
                data-height="400"
                data-chrome="nofooter noborders">
             </a></td>
+          </tr>
+          <tr>
+            <td><strong>Icon: </strong></td>
+            <td><%= @organization.icon %></td>
           </tr>
           <tr>
             <td><strong>Technology:</strong></td>

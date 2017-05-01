@@ -9,7 +9,6 @@ class OrganizationsController < ApplicationController
 
   def new
     @organization = Organization.new
-
   end
 
   def create
@@ -45,7 +44,7 @@ class OrganizationsController < ApplicationController
   end
 
   def organization_params
-    params.require(:organization).permit([:name, :address, :overview, :employees, :teamsize, :website, :twitter, { tag_ids:[] }])
+    params.require(:organization).permit([:name, :address, :overview, :employees, :teamsize, :website, :twitter, :icon, { tag_ids:[] }])
   end
 
 end
