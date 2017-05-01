@@ -1,10 +1,10 @@
 class OrganizationsController < ApplicationController
-  before_action :authenticate_user!
+  
   before_action :find_organization, only:[:show, :edit, :update]
 
 
   def index
-    @organizations = Organization.all
+    @organizations = Organization.all.page(params[:page]).per_page(30)
   end
 
   def new
