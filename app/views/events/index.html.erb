@@ -1,3 +1,10 @@
+<style>
+.simple-calendar .day {
+    border: lightgrey solid thin;
+    width: 14.2858%;
+}
+</style>
+
 <div class="body-content">
 <div class="container">
 
@@ -9,12 +16,12 @@
         <%= month_calendar events: @events.each do |date, evs| %>
           <%= date %>
             <% evs.each do |event| %>
-
-            <a class='tooltipped' data-position="bottom" data-delay="50"
+		
+            <br><a class='tooltipped' data-position="bottom" data-delay="50"
                data-tooltip="<h5><%= event.name %></h5><br>
                              <h6>Organized by: <%= event.group %></h6><br>
                              <h6>Hosted at: <%= event.venue %></h6><br>
-                             <h6><%= event.address %></h6>" href="<%= event.url %>"><%= event.name %></a>
+                             <h6><%= event.address %></h6>" href="<%= event.url %>"><%= event.name %></a><br>
           </div>
             <% end %>
         <% end %>

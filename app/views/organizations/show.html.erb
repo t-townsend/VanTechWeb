@@ -109,16 +109,18 @@
 
       <script>
         handler = Gmaps.build('Google');
-          handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+          handler.buildMap({ provider: { Zoom: 15 }, internal: {id: 'map'}}, function(){
             var markers = handler.addMarkers([
               {
                   "lat": <%= @organization.lat %>,
                   "lng": <%= @organization.long %>,
-                  "infowindow": "<%= "#{@organization.name}"%>"
+                  "infowindow": "<%= "#{@organization.name}"%>"   
               }
             ]);
             handler.bounds.extendWith(markers);
-          handler.fitMapToBounds();
+            handler.map.centerOn(markers[0]);
+          //handler.fitMapToBounds();
+          console.log(handler);
         });
       </script>
 
