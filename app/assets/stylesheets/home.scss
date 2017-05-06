@@ -1,9 +1,3 @@
-.body-content{
-  position:absolute;
-  top:50px;
-  left:50px;
-  width: 100%;
-}
 
 .overlay{
   position: absolute;
@@ -13,6 +7,9 @@
   text-align: center;
   color:white;
 }
+.parallax-container {
+    height: 60%;
+  }
 
 .padded-container{
   padding: 20px 0px 20px;
@@ -22,4 +19,13 @@
 }
 .navbar-brand-icon{
   padding: 0px 15px 0px;
+}
+
+
+.footerlogo{
+  float: left;
+  width: 75px;
+  margin-top: 13px;
+  padding-right: 15px;
+  height: auto;
 }

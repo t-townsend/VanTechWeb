@@ -8,6 +8,10 @@ class TagDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
+
+    organizations: Field::HasMany,
+    taggings: Field::HasMany,
+
     id: Field::Number,
     name: Field::String,
     created_at: Field::DateTime,
@@ -20,15 +24,21 @@ class TagDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
+
+    :organizations,
+    :taggings,
     :id,
     :name,
-    :created_at,
-    :updated_at,
+
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
+
+    :organizations,
+    :taggings,
+
     :id,
     :name,
     :created_at,
@@ -39,13 +49,19 @@ class TagDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+
+    :organizations,
+    :taggings,
+
     :name,
   ].freeze
 
   # Overwrite this method to customize how tags are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(tag)
-  #   "Tag ##{tag.id}"
-  # end
+
+  def display_resource(tag)
+    tag.name
+  end
+
 end

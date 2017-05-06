@@ -1,0 +1,53 @@
+<style>
+.simple-calendar .day {
+    border: lightgrey solid thin;
+    width: 14.2858%;
+}
+</style>
+
+<div class="body-content">
+  <div class="container">
+
+    <div class="row">
+      <div class="col s12 m9">
+
+        <div class="card">
+          <div class="card-content">
+            <p class='right'><%= "Found #{@events.length} events in your area" %></p>
+            <h3>EVENTS LIST</h3>
+            <hr>
+          </div>
+
+            <div class="card-content">
+              <%= month_calendar events: @events.each do |date, evs| %>
+              <%= date %>
+                <% evs.each do |event| %>
+        
+                <br><a class='tooltipped' data-position="bottom" data-delay="50"
+                  data-tooltip="<h5><%= event.name %></h5><br>
+                                <h6>Organized by: <%= event.group %></h6><br>
+                                <h6>Hosted at: <%= event.venue %></h6><br>
+                                <h6><%= event.address %></h6>" href="<%= event.url %>"><%= event.name %></a><br>
+                <% end %>
+              <% end %>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('.tooltipped').each(function(index, element) {
+            var span = $('#' + $(element).attr('data-tooltip-id') + '>span:first-child');
+            span.before($(element).attr('data-tooltip'));
+            span.remove();
+        });
+    });
+</script>
+

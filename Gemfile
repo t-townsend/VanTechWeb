@@ -20,7 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'rails_12factor', group: :production
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -42,7 +42,26 @@ gem 'faker', github: 'stympy/faker'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 
 
+
 gem 'administrate', '0.4.0'
+
+gem 'httparty'
+
+gem 'geocoder'
+
+gem 'gmaps4rails'
+
+gem 'administrate', '0.4.0'
+
+gem 'vider', github: 'wazery/vider'
+
+gem 'dotenv-rails'
+
+gem "simple_calendar", "~> 2.0"
+
+gem 'kaminari'
+
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

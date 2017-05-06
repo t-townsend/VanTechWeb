@@ -16,5 +16,13 @@
 # Ignore Byebug command history file.
 .byebug_history
 .idea/
+<<<<<<< HEAD
 
 # this is a comment
+=======
+.env
+
+# this is a comment
+/public/uploads/
+/public/assets/
+>>>>>>> e1701ea82ef829adf672867cdee763d79af382e4

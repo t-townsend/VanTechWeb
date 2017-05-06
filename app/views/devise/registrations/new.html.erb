@@ -1,13 +1,20 @@
 <div class="body-content">
   <div class="container">
+
+
     <h2>Sign up</h2>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
       <%= devise_error_messages! %>
 
       <div class="field">
         <%= f.label :name %><br />
         <%= f.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :icon %><br />
+        <%= f.file_field :icon %>
       </div>
 
       <div class="field">
@@ -34,7 +41,10 @@
 
     <% end %>
 
+
     <%= render "devise/shared/links" %>
 
   </div>
 </div>
+
+<br>

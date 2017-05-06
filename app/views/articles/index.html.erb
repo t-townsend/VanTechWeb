@@ -1,0 +1,35 @@
+<div class="body-content">
+<div class="container">
+
+  <h1>News List</h1>
+
+  <div class='paginate-top white-text'>
+    <p class='right paginate-text'>
+      <%= "Giving you #{@articles.length} articles" %></p>
+    <p class='paginate-text2'><%= paginate @articles %></p>
+  </div>
+
+  <ul id = "article-block">
+  <% @articles.each do |article| %>
+  <li>
+    <div class="row ">
+      <div class="col m4">
+        <img style="width: 100%;margin: 14px 0px;" src="<%= article.urlToImage %>" alt="">
+      </div>
+      <div class="col m8">
+        <p><%= article.title %><p>
+        <span><%= article.publishedAt.to_formatted_s(:long_ordinal) %></span><br>
+        <span><a href="<%= article.url %>">Source</a></span>
+        <p>Description: <%= article.description %></p>
+      </div>
+    </div>
+    <hr class="style-hr">
+  </li>
+
+  <% end %>
+</ul>
+<div class='paginate-bottom'>
+  <%= paginate @articles %> <br><br>
+</div>
+</div>
+</div>
