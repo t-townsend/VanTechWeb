@@ -1,5 +1,5 @@
 # VanTechWeb #
-###A Website to Connect Developers With Vancouver Tech Companies##
+### A Website to Connect Developers With Vancouver Tech Companies ###
 
 This was a team collaboration that was built over a weekend. It uses APIs to
 populate data in the news feed, Twitter feed, calendar events and Google maps.
@@ -18,13 +18,26 @@ It is hosted on:
 (http://vantechweb.space:8080/)
 ***
 
-####Home Page###
+#### Home Page ####
+
 ![Alt text](/app/assets/images/image1.png)
-####Events Calendar###
+***
+
+#### Events Calendar ####
+
 ![Alt text](/app/assets/images/image2.png)
-####News Feed###
+***
+
+#### News Feed ####
+
 ![Alt text](/app/assets/images/image5.png)
-####Organizations Directory###
+***
+
+#### Organization Directory ####
+
 ![Alt text](/app/assets/images/image3.png)
-####Single Organization Show Page###
+***
+
+#### Single Organization Show Page ####
+
 ![Alt text](/app/assets/images/image4.png)
